@@ -2,3 +2,6 @@ baseURL = "http://crossid.io/"
 languageCode = "en-us"
 title = "CrossID"
 theme = "gohugoio"
+
+[social]
+twitter = "crossid_io"
