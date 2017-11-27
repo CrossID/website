@@ -4,3 +4,9 @@
     {{ partial "svg/twitter.svg" (dict "size" "32px") }}
   </a>
 {{ end }}
+
+{{ with .Site.Social.linkedin }}
+  <a href="https://www.linkedin.com/company/{{ . }}" title="Linkedin" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2">
+    {{ partial "svg/linkedin.svg" (dict "size" "32px") }}
+  </a>
+{{ end }}
