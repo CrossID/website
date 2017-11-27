@@ -1,0 +1,4 @@
+baseURL = "http://crossid.io/"
+languageCode = "en-us"
+title = "CrossID"
+theme = "gohugoio"
