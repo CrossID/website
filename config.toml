@@ -5,3 +5,22 @@ theme = "gohugoio"
 
 [social]
 twitter = "crossid_io"
+
+## Menus
+
+## Global Menu
+
+  [[menu.global]]
+    name = "Product Tour"
+    weight = 5
+    identifier = "product-tour"
+    url = "/product-tour/"
+
+
+  # Anything with a weight > 100 gets an external icon
+  [[menu.global]]
+    name = "GitHub"
+    weight = 200
+    identifier = "github"
+    post = "external"
+    url = "https://github.com/crossid"
