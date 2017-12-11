@@ -17,6 +17,11 @@ linkedin = "10688950"
     identifier = "product-tour"
     url = "/product-tour/"
 
+  [[menu.global]]
+    name = "Docs"
+    weight = 1
+    identifier = "docs"
+    url = "/documentation/"
 
   # Anything with a weight > 100 gets an external icon
   [[menu.global]]
@@ -25,3 +30,12 @@ linkedin = "10688950"
     identifier = "github"
     post = "external"
     url = "https://github.com/crossid"
+
+## Docs
+
+[[menu.docs]]
+  name = "About CrossID"
+  weight = 1
+  identifier = "about"
+  url = "/about/"
+
