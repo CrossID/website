@@ -7,6 +7,19 @@ theme = "gohugoio"
 twitter = "crossid_io"
 linkedin = "10688950"
 
+# MARKDOWN
+## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+  angledQuotes = false
+  latexDashes = true
+
+
+## As of v0.20, all content files include a default "categories" value that's the same as the section. This was a cheap future-proofing method and should/could be changed accordingly.
+[taxonomies]
+  category = "categories"
+
 ## Menus
 
 ## Global Menu
@@ -39,3 +52,14 @@ linkedin = "10688950"
   identifier = "about"
   url = "/about/"
 
+[[menu.docs]]
+  name = "SCIM"
+  weight = 10
+  identifier = "scim"
+  url = "/scim/"
+
+[[menu.docs]]
+  name = "Enterprise"
+  weight = 900
+  identifier = "enterprise"
+  url = "/enterprise/"
