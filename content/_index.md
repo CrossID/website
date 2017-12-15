@@ -37,7 +37,11 @@ sections:
     cta: See product tour.
     link: /product-tour
     color_classes: gradient-blue white
-    image: /images/homepage-screenshot-person-profile.png
+    slides:
+      - image: /images/homepage-screenshot-person-profile.png
+        label: Profile
+      - image: /images/homepage-screenshot-person-apps.png
+        label: Apps
     copy: "Manage the lifecycle of people identities and access rights across application boundaries."
   - heading: "Applications"
     cta: App Directory.

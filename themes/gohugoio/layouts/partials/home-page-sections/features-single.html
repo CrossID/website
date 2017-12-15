@@ -7,7 +7,21 @@
 
         <div class="w-100 w-50-l {{ if modBool $i 2 }}order-1{{ else }}order-0{{ end }}">
           <div class="w-90-ns center">
-            <img src="{{ .image }}" alt="image depicting an example of {{ .heading }}" class="img shadow-5">
+            {{ if .image }}
+              <img src="{{ .image }}" alt="image depicting an example of {{ .heading }}" class="img shadow-5">
+            {{ end }}
+            {{ if .slides }}
+              <div class="single-image-slider-nav">
+                {{ range .slides }}
+                  <span class="tc v-mid bg-blue pa2">{{ .label }}</span>
+                {{ end }}
+              </div>
+              <div class="single-image-slider">
+                {{ range .slides }}
+                  <img src="{{ .image }}" alt="image depicting an example of {{ .heading }}" class="img shadow-5">
+                {{ end }}
+              </div>
+            {{ end }}
           </div>
         </div>
 
