@@ -44,6 +44,11 @@ linkedin = "10688950"
     post = "external"
     url = "https://github.com/crossid"
 
+## Footer Contact
+  [[menu.footer_contact]]
+    name = "Contact Us"
+    url = "/contact"
+
 ## Docs
 
 [[menu.docs]]
