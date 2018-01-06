@@ -5,32 +5,32 @@ features:
   - heading: Person Centric
     image_path: /images/icon-id_badge.svg
     tagline: Person overview in a glance
-    copy: Get a full person view including application assignments, access rights and full audit in one place.
+    copy: Get a full person view including application assignments, access rights and full audit trail in one place.
 
-  - heading: SCIM Provisioning
+  - heading: SCIM Based Provisioning
     image_path: /images/icon-provisioning.svg
-    tagline: Automate Application Provisioning
-    copy: Provision and de-provision identities, access rights or virtually any resource using SCIM v2 cloud standards.
+    tagline: Automate Provisioning
+    copy: Provision identities and access rights using SCIM v2 cloud standards.
 
   - heading: Recording Tools
     image_path: /images/icon-recorder.svg
     tagline: Resource Changes Recorder
-    copy: Record and investigate any change made on the entire lifecycle of application resources.
+    copy: Record and investigate any change made on the entire lifetime of users and access rights.
 
   - heading: Get Compliance
     image_path: /images/icon-compliance.svg
     tagline: Regulatory Compliance
-    copy: Identity and access rights regulatory compliance including but not limited to regulations such PCI, ISO 27001, SOC 2, HIPAA/BAA, etc.
+    copy: Identity and access rights regulatory compliance including to regulations such PCI, ISO 27001, SOC 2, HIPAA/BAA, etc.
 
   - heading: Applications
     image_path: /images/icon-cloud_apps.svg
-    tagline: Hybrid support for Cloud and On-Prem applications
-    copy: Manage identity and access rights across any application, whether on prem or cloud.
+    tagline: Hybrid On-Prem or Cloud applications
+    copy: Manage identity and access rights across any application, whether on-premise or cloud.
 
   - heading: Governance
     image_path: /images/icon-governance.svg
     tagline: Non burdensome Governenance
-    copy: Convert oppressive manual procedures such as access reviews and passive reports by reactive actionable items.
+    copy: Convert oppressive manual procedures such as access reviews and passive reports into reactive actionable items.
 
 sections:
   - heading: "It is all about people"
