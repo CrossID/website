@@ -44,7 +44,7 @@ sections:
         label: Apps
     copy: "Manage the lifecycle of people identities and access rights across application boundaries."
   - heading: "Applications"
-    cta: App Directory.
+    cta: App Directory
     link: /product-tour
     color_classes: bg-primary-color-light black
     image: /images/homepage-screenshot-apps.png
