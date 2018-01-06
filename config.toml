@@ -24,25 +24,31 @@ linkedin = "10688950"
 
 ## Global Menu
 
-  [[menu.global]]
-    name = "Product Tour"
-    weight = 5
-    identifier = "product-tour"
-    url = "/product-tour/"
+  #[[menu.global]]
+  #  name = "Product Tour"
+  #  weight = 5
+  #  identifier = "product-tour"
+  #  url = "/product-tour/"
 
   [[menu.global]]
     name = "Docs"
-    weight = 1
+    weight = 10
     identifier = "docs"
     url = "/documentation/"
 
-  # Anything with a weight > 100 gets an external icon
   [[menu.global]]
-    name = "GitHub"
-    weight = 200
-    identifier = "github"
-    post = "external"
-    url = "https://github.com/crossid"
+    name = "Contact Us"
+    weight = 5
+    identifier = "contactus"
+    url = "/contact/"
+
+  # Anything with a weight > 100 gets an external icon
+  #[[menu.global]]
+  #  name = "GitHub"
+  #  weight = 200
+  #  identifier = "github"
+  #  post = "external"
+  #  url = "https://github.com/crossid"
 
 ## Footer Contact
   [[menu.footer_contact]]
