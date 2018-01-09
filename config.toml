@@ -58,10 +58,10 @@ linkedin = "10688950"
 ## Docs
 
 [[menu.docs]]
-  name = "About CrossID"
+  name = "CrossID"
   weight = 1
-  identifier = "about"
-  url = "/about/"
+  identifier = "crossid"
+  url = "/crossid/"
 
 [[menu.docs]]
   name = "SCIM"
@@ -74,3 +74,9 @@ linkedin = "10688950"
   weight = 900
   identifier = "enterprise"
   url = "/enterprise/"
+
+[[menu.docs]]
+  name = "Integration"
+  weight = 50
+  identifier = "integration"
+  url = "/integration/"

@@ -1,15 +1,15 @@
 ---
-title: SCIM Mappers
-linktitle: SCIM Mappers
-description: Explaining what are SCIM mappers
+title: Resource Mappers
+linktitle: Resource Mappers
+description: Explaining what mappers are
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01
-categories: [scim]
+categories: [integration, scim]
 layout: single
 menu:
   docs:
-    parent: "scim"
+    parent: "integration"
     weight: 20
 weight: 20
 sections_weight: 20

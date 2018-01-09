@@ -1,20 +1,20 @@
 ---
-title: About CrossID
+title: CrossID
 linktitle: CrossID Overview
 description: CrossID's features, roadmap, license, and motivation.
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01
-categories: []
+categories: [fundamentals]
 keywords: []
 menu:
   docs:
-    parent: "about"
+    parent: "crossid"
     weight: 1
 weight: 1
 draft: false
-aliases: [/about-crossid/,/docs/]
+aliases: [/crossid/,/docs/]
 toc: false
 ---
 
-TODO.
+CrossID is a suite of hybrid identity management services.

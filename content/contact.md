@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: We'd love to hear from you, please submit your details and we'll get back to you.
+description: We'd love to hear from you, please submit your details and we'll get back to you quickly.
 layout: simple
 ---
 
