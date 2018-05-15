@@ -35,7 +35,7 @@ For example, the .NET Minion is used to communicate with applications such as _A
 
 The .NET Minion is shipped as a single archive, it is a standalone application and requires no container (such as IIS) to run.
 
-Uncompress the _crossid-csminion-xx.zip_ into _c:\Program Files\Crossid CS Minion_
+Uncompress the _crossid-csminion-xx.zip_ into _c:\Program Files\CrossID .NET Minion_
 
 The service requires zero configuration to run, simply click the `crossid-csminion.exe` to ensure it starts properly, expect a message such:
 
@@ -48,14 +48,16 @@ At this point the minion service should be up and running.
 
 The configuration is XML based and can be found in the `crossid-csminion.exe.config` file under the `<appSettings>` section.
 
-| Property                | Description           |
-|-------------------------|-----------------------|
-|bindAddress|Base URL to bind the service to, in the format of _http(s)://ip:port/_, example: **https://\*:9000/** <br/><br/> note: _*_ can be used instead of ip to bind the service to all IPs.|
-|serviceName|The name of the windows service. (See "Service Installation" below)|
-|serviceDescription|The description of the windows service.|
-|authJwtSecret|The secret to validate JWT tokens with, encoded in base64. <br/><br/>**Note: this must change in production.**|
-|authJwtIssuer|Accept JWT tokens only for the given issuer, leave as is.|
-|authJwtAudience|Accept JWT tokens only if the given audience matches, leave as is.|
+| Property                | Category|  Description    |
+|-------------------------|---------|-----------------|
+|bindAddress|Network|Base URL to bind the service to, in the format of _http(s)://ip:port/_, example: **https://\*:9000/** <br/><br/> note: _*_ can be used instead of ip to bind the service to all IPs.|
+|authJwtSecret|Security|The secret to validate JWT tokens with, encoded in base64. <br/><br/>**Note: this must change in production.**|
+|authJwtIssuer|Security|Accept JWT tokens only for the given issuer, leave as is.|
+|authJwtAudience|Security|Accept JWT tokens only if the given audience matches, leave as is.|
+|serilog:minimum-level|Logging|The minimal logging level to write, possible values are: _Verbose_, _Debug_, _Information_, _Warning_, _Error_ and _Fatal_|
+|serilog:write-to:File.path|Logging|The path where logs are stored, (e.g., _C:\Users\Administrator\AppData\Roaming\CrossID .NET Minion\logs_)|
+
+Note: Any configuration property not mentioned here should not be modified.
 
 ### Service Installation
 
@@ -63,33 +65,17 @@ The minion can run by simply running the executable although the recommended app
 
 To install as a service:
 
-
-1. Run: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe minion.exe`.
+1. `cd C:\Program Files\CrossID .NET Minion`
+1. Run: `InstallUtil.exe crossid-csminion.exe`.
+1. Supply user and password (please note that user should be in the form of `DOMAIN\Username` (e.g., "CROSSID\CidAdmin"))
 1. Open the _Services_ list, find the service, in the service properties change the credentials to the relevant user in the form of DOMAIN\username.
+
+Note: InstallUtil.exe should be located under `C:\Windows\Microsoft.NET\Framework\v4.0.30319`
 
 Note: For Kerberos based authentication for applications such _Active Directory_, make sure the service credentials has sufficient privileges to communicate with the applications.
 
-### Logs
 
-Every request and errors are captured and stored in files, the logs can be found in the _logs_ folder beneath the primary minion folder.
-
-It is possible to change the logging verbosity by changing the _NLog.config_ file.
-
-The possible logging levels are: _Trace_, _Debug_, _Info_, _Warn_, _Error_ and _Fatal_.
-
-The levels are ordered by verbosity where _Trace_ is the most verbose where the default level is _Info_.
-
-To increase the logging level to _Trace_, simply change the level of the line:
-
-`<logger name="*" minlevel="Info" writeTo="f"/>`
-
-to:
-
-`<logger name="*" minlevel="Trace" writeTo="f"/>`
-
-
-A restart is required for the change to take affect.
-
+To uninstall the service run `InstallUtil.exe crossid-csminion.exe /u`
 
 ### Advanced
 
