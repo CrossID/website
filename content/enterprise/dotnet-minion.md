@@ -77,6 +77,28 @@ Note: For Kerberos based authentication for applications such _Active Directory_
 
 To uninstall the service run `InstallUtil.exe crossid-csminion.exe /u`
 
+
+### Enable SSL
+
+SSL requires binding a certificate to a port.
+
+Import the certificate into `LOCAL COMPUTER > Personal > Certificates`
+
+run `dir cert:\localmachine\my` to get the _Thumbprint_
+
+then run:
+
+```powershell
+$guid = [guid]::NewGuid()
+$certHash = "09E7C2609A442057BB3D8170B8F0FA8F4806F298" # replace with the correct Thumbprint
+$ip = "0.0.0.0"
+$port = 9000
+"http add sslcert ipport=$($ip):$port certhash=$certHash appid={$guid}" | netsh
+```
+expect _SSL Certificate successfully added_, now every connection attempt to that ip/port would be answered using the specified certificate.
+
+
+
 ### Advanced
 
 #### Issuing tokens
