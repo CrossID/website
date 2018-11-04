@@ -30,6 +30,18 @@ It is intended for those who can't or don't want to use an automated approach su
 
 Tip: It is recommended to set up a machine with tools such _Notepad++, Winscp, Postman, Robo3t_ to please the procedure.
 
+
+# Setup layout
+
+Our folder layout will look like:
+
+```
+pkg - installation packages
+bin - binary and shell scripts
+etc - configuration files
+data - data import files
+```
+
 # Preparations
 
 Add `CID_HOME` env var to point the root application location, can refer to $HOME directory or to folders such `/opt/crossid`
@@ -41,17 +53,19 @@ source ~/.bash_profile
 
 Copy all installation packages into `$CID_HOME/pkgs`
 
+# Manually copy installation files
 
-# Setup layout
 
-Our folder layout is going to look like:
+Manually copy backend files to $HOME/pkg:
 
-```
-pkgs - installation packages
-bin - binary and shell scripts
-etc - configuration files
-data - data import files
-```
+- `crossid-vx.x.x-linux-amd64.tar.gz`
+- `crossid.env`
+- `crossid.service`
+- `cid.sh` (script)
+- `cid_start.sh` (script)
+- `cid_import.sh` (script)
+- `cid_data_import` (folder)
+
 
 # Installation
 
@@ -68,15 +82,6 @@ su - crossid
 mkdir -p $HOME/bin $HOME/etc $HOME/log $HOME/data $HOME/pkg
 ```
 
-Manually copy backend files to $HOME/pkg:
-
-- `crossid-vx.x.x-linux-amd64.tar.gz`
-- `crossid.env`
-- `crossid.service`
-- `cid.sh` (script)
-- `cid_start.sh` (script)
-- `cid_import.sh` (script)
-- `cid_data_import` (folder)
 
 # Extract backend binary, configs and scripts
 
