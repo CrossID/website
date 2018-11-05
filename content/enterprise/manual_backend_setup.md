@@ -132,3 +132,15 @@ sudo update-ca-trust
 ```
 
 Then to start server again.
+
+# Extra
+
+## Creating a tenant
+
+A tenant can be created using the _crossid_ binary by running:
+
+```bash
+cid.sh tenant create --file $HOME/data/tenant.json --user-file $HOME/data/import/resources/cid_user_system.json
+```
+
+Where _tenant.json_ is the tenant doc and _cid_user_system.json_ is an initial super user to import into the tenant.

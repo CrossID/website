@@ -31,17 +31,21 @@ It is intended for those who can't or don't want to use an automated approach su
 Our folder layout will look like:
 
 ```
-pkg - installation packages
+pkg - installation files
 data - where db files are stored
+etc - configuration files
+logs - log files
 ```
 
 # Manually copy installation files
 
 Manually copy into $HOME/pkg the following files:
 
-- `mongodb-linux-x86_64-rhel70-4.x.x.tgz`
-- `mongod.conf`
-- `mongod.service`
+- `mongodb-linux-x86_64-rhel70-4.x.x.tgz` - the installation tar ball
+- `mongod.conf` - mongo daemon configuration file
+- `mongod.service` - systemd service
+- `mongo_as_crossid.sh` - shell file to login as crossid user
+- `mongo_as_super.sh` - shell file to login as super user
 
 
 # Basic Setup
