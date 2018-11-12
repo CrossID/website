@@ -54,6 +54,7 @@ The configuration is XML based and can be found in the `crossid-csminion.exe.con
 |authJwtSecret|Security|The secret to validate JWT tokens with, encoded in base64. <br/><br/>**Note: this must change in production.**|
 |authJwtIssuer|Security|Accept JWT tokens only for the given issuer, leave as is.|
 |authJwtAudience|Security|Accept JWT tokens only if the given audience matches, leave as is.|
+|authAllowedSingleIPs|Security|coma separated IP addresses to restrict connections from.|
 |serilog:minimum-level|Logging|The minimal logging level to write, possible values are: _Verbose_, _Debug_, _Information_, _Warning_, _Error_ and _Fatal_|
 |serilog:write-to:File.path|Logging|The path where logs are stored, (e.g., _C:\Users\Administrator\AppData\Roaming\CrossID .NET Minion\logs_)|
 
