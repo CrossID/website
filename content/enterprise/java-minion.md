@@ -56,6 +56,12 @@ cd /some/folder
 
 Configuration can be found in `etc/minion.properties` file.
 
+
+Tip: If the minion runs within a docker container, copy the current config to your host first:
+
+docker cp cid-jminion:/minion/etc/minion.properties .
+
+
 ### Authentication
 
 Minion authenticate requests using a _JWT bearer token_, the secret of the token is defined in the _security.jwt.secret_ property, please set this property with some complicated random string (such: `openssl rand -base64 12`)

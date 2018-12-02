@@ -225,3 +225,10 @@ sudo systemctl start mongod
 systemctl status mongod
 ```
 
+# References
+
+- https://docs.mongodb.com/manual/tutorial/configure-ssl/
+- https://docs.mongodb.com/manual/tutorial/enable-authentication/
+- https://docs.mongodb.com/manual/reference/configuration-options/
+- https://docs.mongodb.com/manual/reference/connection-string/
+  
