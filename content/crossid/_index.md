@@ -17,4 +17,4 @@ aliases: [/crossid/,/docs/]
 toc: false
 ---
 
-CrossID is a suite of hybrid identity management services.
+CrossID is a suite of hybrid resource management services.
