@@ -4,7 +4,7 @@ linktitle: Manual Camunda BPMN Setup
 description: How to manually setup MongoDB
 date: 2018-11-23
 publishdate: 2018-11-23
-lastmod: 2018-11-23
+lastmod: 2018-12-12
 categories: [enterprise, onprem, private-cloud, setup, installation, manual, bpmn, workflow]
 layout: single
 menu:
@@ -89,7 +89,7 @@ For production it is highly recommended to use a DB such Oracle or MSSQL.
 Manually copy [ojdbcX.jar](https://www.oracle.com/technetwork/database/application-development/jdbc/downloads/index.html) to _~camunda/camunda/server/apache-tomcat-9.x.x/lib_
 
 
-Replace existing Tomact _jdbc/ProcessEngine_ datasource with the following:
+Edit _camunda/server/apache-tomcat-9.x.x/conf/server.xml_ and replace existing Tomcat _jdbc/ProcessEngine_ datasource with the following:
 
 ```xml
 <Resource name="jdbc/ProcessEngine"
