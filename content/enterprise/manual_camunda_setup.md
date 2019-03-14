@@ -139,7 +139,7 @@ Edit file _camunda/server/apache-tomcat-9.x.x/webapps/engine-rest/WEB-INF/web.xm
 
   <context-param>
     <param-name>org.camunda.bpm.engine.rest.jackson.dateFormat</param-name>
-    <param-value>yyyy-MM-dd'T'HH:mm:ssZ</param-value>
+    <param-value>yyyy-MM-dd'T'HH:mm:ssXXX</param-value>
   </context-param>
 
   <!-- ... -->
