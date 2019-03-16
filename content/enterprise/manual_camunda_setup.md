@@ -189,7 +189,18 @@ curl http://localhost:9090/engine-rest/process-definition -v
 curl http://localhost:9090/engine-rest/process-definition -u crossid:<password> -v
 ```
 
+# Configuration
 
+## Job retries
+
+Camunda retries to execute failed job 3 times before an incident is raised, it is adviced to set this to _1_ as some nodes creates backend jobs, which
+may cause a job to be created per retry.
+
+edit `~/camunda/server/apache-tomcat-9.x.x/conf/bpm-platform.xml`, under properties section add:
+
+```xml
+<property name="defaultNumberOfRetries">1</property>
+```
 
 # TLS
 
