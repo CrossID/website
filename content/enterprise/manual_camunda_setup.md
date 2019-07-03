@@ -107,6 +107,13 @@ Edit _camunda/server/apache-tomcat-9.x.x/conf/server.xml_ and replace existing T
               maxIdle="20" />
 ```
 
+For Oracle version > 12 the following line must be addedd into _<properties>_ section of file _camunda/server/apache-tomcat-9.x.x/conf/bpm-platform.xml_:
+
+```xml
+<property name="jdbcBatchProcessing">false</property>
+```
+
+
 
 ## Cleanup H2 DB
 
