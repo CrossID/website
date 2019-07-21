@@ -32,7 +32,7 @@ Following are the requirements for the primary backend server.
 | Property                | Minimum               | Recommended           |
 |-------------------------|-----------------------|-----------------------|
 | Virtualization Platform | ESX only              | ESX only              |
-| OS                      | Linux RHEL 7.4        | Linux RHEL 7.4        |
+| OS                      | Linux RHEL 7.x        | Linux RHEL 7.x        |
 | RAM                     | 16 GB                 | 32 GB                 |
 | Storage                 | 100GB                 | 250GB                 |
 | CPU                     | 4 Xeon VCPUs, 3.xGHz+ | 8 Xeon VCPUs, 3.xGHz+ |
@@ -45,7 +45,7 @@ This java minion is used to communicate with on prem protocols such: databases o
 | Property                | Minimum               | Recommended           |
 |-------------------------|-----------------------|-----------------------|
 | Virtualization Platform | ESX only              | ESX only              |
-| OS                      | Linux RHEL 7.4        | Linux RHEL 7.4        |
+| OS                      | Linux RHEL 7.x        | Linux RHEL 7.x        |
 | RAM                     | 8 GB                  | 16 GB                 |
 | Storage                 | 40GB                  | 80GB                  |
 | CPU                     | 4 Xeon VCPUs, 3.xGHz+ | 8 Xeon VCPUs, 3.xGHz+ |
@@ -58,11 +58,11 @@ This is a server used to communicate with Microsoft applications such as Active 
 | Property                | Minimum                                  | Recommended                            |
 |-------------------------|------------------------------------------|----------------------------------------|
 | Virtualization Platform | ESX only / Hypervisor                    | ESX only / Hypervisor                  |
-| OS                      | Windows Server 12 / 16                   | Windows Server 12 / 16                 |
+| OS                      | Windows Server 16                        | Windows Server 16                      |
 | RAM                     | 8 GB                                     | 16 GB                                  |
 | Storage                 | 40GB                                     | 80GB                                   |
 | CPU                     | 4 Xeon VCPUs, 3.xGHz+                    | 8 Xeon VCPUs, 3.xGHz+                  |
-| Extra Softwares         | .NET 4.7                                 | .NET 4.7                               |
+| Extra Softwares         | .NET 4.7.x                               | .NET 4.7.x                             |
 | Domain                  | Member of the AD domain to be managed.   | Member of the AD domain to be managed. |
 
 
@@ -77,7 +77,7 @@ Following are the requirements for the primary backend server.
 | Property                | Minimum               | Recommended           |
 |-------------------------|-----------------------|-----------------------|
 | Virtualization Platform | ESX only              | ESX only              |
-| OS                      | Linux RHEL 7.4        | Linux RHEL 7.4        |
+| OS                      | Linux RHEL 7.x        | Linux RHEL 7.x        |
 | RAM                     | 8 GB                  | 16 GB                 |
 | Storage                 | 50GB                  | 80GB                  |
 | CPU                     | 2 Xeon VCPUs, 3.xGHz+ | 4 Xeon VCPUs, 3.xGHz+ |
@@ -90,7 +90,7 @@ This java minion is used to communicate with on prem protocols such: databases o
 | Property                | Minimum               | Recommended           |
 |-------------------------|-----------------------|-----------------------|
 | Virtualization Platform | ESX only              | ESX only              |
-| OS                      | Linux RHEL 7.4        | Linux RHEL 7.4        |
+| OS                      | Linux RHEL 7.x        | Linux RHEL 7.x        |
 | RAM                     | 8 GB                  | 8 GB                  |
 | Storage                 | 40GB                  | 60GB                  |
 | CPU                     | 2 Xeon VCPUs, 3.xGHz+ | 2 Xeon VCPUs, 3.xGHz+ |
@@ -103,11 +103,11 @@ This is a server used to communicate with Microsoft applications such as Active 
 | Property                | Minimum                                  | Recommended                            |
 |-------------------------|------------------------------------------|----------------------------------------|
 | Virtualization Platform | ESX only / Hypervisor                    | ESX only / Hypervisor                  |
-| OS                      | Windows Server 12 / 16                   | Windows Server 12 / 16                 |
+| OS                      | Windows Server 16                        | Windows Server 16                      |
 | RAM                     | 8 GB                                     | 12 GB                                  |
 | Storage                 | 40GB                                     | 60GB                                   |
 | CPU                     | 2 Xeon VCPUs, 3.xGHz+                    | 2 Xeon VCPUs, 3.xGHz+                  |
-| Extra Softwares         | .NET 4.7                                 | .NET 4.7                               |
+| Extra Softwares         | .NET 4.7.x                               | .NET 4.7.x                             |
 | Domain                  | Member of the AD domain to be managed.   | Member of the AD domain to be managed. |
 
 
@@ -117,6 +117,6 @@ The relational database is used by the business process engine.
 
 | Property                | Minimum                                      | Recommended                                  |
 |-------------------------|----------------------------------------------|----------------------------------------------|
-| Database                | Oracle 12c or MSSQL Server 2008 R2/2012/2014 | Oracle 12c or MSSQL Server 2008 R2/2012/2014 |
+| Database                | Oracle 12x or MSSQL Server 2008 R2/2012/2014 | Oracle 12x or MSSQL Server 2008 R2/2012/2014 |
 | Schema Name             | crossid_prod or crossid_test                 | crossid_prod or crossid_test                 |
 | Estimated Size          | 16 GB                                        | 16 GB                                        |
