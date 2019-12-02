@@ -79,3 +79,27 @@ try specifying the user in the format of: `<DOMAIN>\<user>` where domain is the 
 
 `/mapuser INDEXIA\crossid_sso`
 
+
+## Troubleshooting
+
+### No matching key found
+
+Error: `matching key not found in keytab. Looking for [HTTP server.domain.corp] realm: DOMAIN.CORP kvno: 5 etype: 18`
+Problem: There is no matching key in the provided keytab
+Troubleshooting: List the keys in keytab
+
+```
+ktutil
+ktutil: read_kt <path/to/keytab/crossid.keytab>
+ktutil: l -e
+slot KVNO Principal
+---- ---- ---------------------------------
+  1     4      HTTP/server.domain.corp@DOMAIN.CORP (aes128-cts-hmac-sha1-96)
+```
+
+note: `ktutil` is provided by the `krb5-workstation` package.
+
+- If looked KVNO is _5_ and keytab contains _4_ then keytab is too old.
+- Make sure looked principal matches, otherwise keytab has a wrong SPN and should be re-generated.
+- After updating keytab to the correct one, run in workstation: `klist purge` to force aquiring new ticket from KDC.
+- Make sure looked etype (e.g., "18") corresponds to the encryption type of the key (e.g., "aes128-cts-hmac-sha1-96" is etype 17), see [assigned numbers](https://tools.ietf.org/html/rfc3961#section-8) for more info.
